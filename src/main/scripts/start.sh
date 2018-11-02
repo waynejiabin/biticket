@@ -45,7 +45,7 @@ fi
 JAVA_MEM_OPTS="${java.mem.opts}"
 
 echo -e "Starting the $SERVER_NAME ...\c"
-nohup java $JAVA_OPTS $JAVA_MEM_OPTS $JAVA_DEBUG_OPTS $JAVA_JMX_OPTS -classpath $CONF_DIR:$LIB_JARS com.ruoyi.RuoYiApplication > /dev/null 2>&1 &
+nohup java $JAVA_OPTS $JAVA_MEM_OPTS $JAVA_DEBUG_OPTS $JAVA_JMX_OPTS -classpath $CONF_DIR:$LIB_JARS com.biticket.BiticketApplication > /dev/null 2>&1 &
 
 COUNT=0
 while [ $COUNT -lt 1 ]; do    

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ruoyi.project.wallet.userTransSerial.mapper.UserTransSerialMapper">
+<mapper namespace="com.biticket.project.wallet.userTransSerial.mapper.UserTransSerialMapper">
 
     <resultMap type="UserTransSerial" id="UserTransSerialResult">
         <result property="transId" column="trans_id"/>

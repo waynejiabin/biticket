@@ -38,7 +38,7 @@ JAVA_OPTS=" -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfile.enco
 JAVA_MEM_OPTS="-server -Xms1024m -Xmx1024m -XX:PermSize=64m -XX:SurvivorRatio=2 -XX:+UseParallelGC"
 
 echo -e "Starting the $SERVER_NAME ...\c"
-nohup java $JAVA_OPTS $JAVA_MEM_OPTS  -classpath $CONF_DIR:$LIB_JARS com.ruoyi.RuoYiApplication > /dev/null 2>&1 &
+nohup java $JAVA_OPTS $JAVA_MEM_OPTS  -classpath $CONF_DIR:$LIB_JARS com.biticket.BiticketApplication > /dev/null 2>&1 &
 
 COUNT=0
 while [ $COUNT -lt 1 ]; do

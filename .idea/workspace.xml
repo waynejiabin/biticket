@@ -2,7 +2,296 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e387c6e1-382a-4c2e-a3a4-c4f7c6033d43" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/controller/LogoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.sh" beforeDir="false" afterPath="$PROJECT_DIR$/api.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/RuoYiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/BiticketApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/RuoYiServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/BiticketServletInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/constant/CommonMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/constant/CommonMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/constant/ConfigConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/constant/ConfigConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/constant/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/constant/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/constant/PermissionConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/constant/PermissionConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/constant/ScheduleConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/constant/ScheduleConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/constant/ShiroConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/constant/ShiroConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/constant/UserConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/constant/UserConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/enums/KingoTransTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/enums/KingoTransTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/enums/KingoTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/enums/KingoTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/enums/MemberTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/enums/MemberTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/enums/SmsTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/enums/SmsTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/DemoModeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/exception/DemoModeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/TokenException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/exception/TokenException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/UsernameIsExitedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/exception/UsernameIsExitedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/base/BaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/exception/base/BaseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/file/FileNameLengthLimitExceededException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/exception/file/FileNameLengthLimitExceededException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/file/InvalidExtensionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/exception/file/InvalidExtensionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/user/CaptchaException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/exception/user/CaptchaException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/user/UserBlockedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/exception/user/UserBlockedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/user/UserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/exception/user/UserException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/user/UserNotExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/exception/user/UserNotExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/user/UserPasswordNotMatchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/exception/user/UserPasswordNotMatchException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/user/UserPasswordRetryLimitCountException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/exception/user/UserPasswordRetryLimitCountException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/user/UserPasswordRetryLimitExceedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/exception/user/UserPasswordRetryLimitExceedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/support/CharsetKit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/support/CharsetKit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/support/Convert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/support/Convert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/support/StrFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/support/StrFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/thirdUtil/JsonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/thirdUtil/JsonUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/thirdUtil/XmlUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/thirdUtil/XmlUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/AddressUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/AddressUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/ClassUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/ClassUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/DateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/IpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/IpUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/LogUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/LogUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/MajorKeyUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/MajorKeyUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/MapDataUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/MapDataUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/MessageUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/MessageUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/PhoneFormatCheckUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/PhoneFormatCheckUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/ServletUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/ServletUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/StringUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/bean/BeanUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/bean/BeanUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/http/HttpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/http/HttpUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/security/EncryptUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/security/EncryptUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/security/JwtTokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/security/JwtTokenUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/security/PermissionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/security/PermissionUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/spring/SpringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/utils/spring/SpringUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/xss/XssFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/xss/XssFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/common/xss/XssHttpServletRequestWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/common/xss/XssHttpServletRequestWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/aspectj/DsAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/aspectj/DsAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/aspectj/lang/annotation/Ds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/aspectj/lang/annotation/Ds.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/aspectj/lang/annotation/Excel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/aspectj/lang/annotation/Excel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/aspectj/lang/annotation/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/aspectj/lang/annotation/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/aspectj/lang/enums/BusinessStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/aspectj/lang/enums/BusinessStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/aspectj/lang/enums/BusinessType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/aspectj/lang/enums/BusinessType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/aspectj/lang/enums/DataSourceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/aspectj/lang/enums/DataSourceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/aspectj/lang/enums/OperatorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/aspectj/lang/enums/OperatorType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/config/CaptchaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/config/CaptchaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/config/DruidConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/config/DruidConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/config/FilterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/config/FilterConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/config/I18nConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/config/I18nConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/config/KaptchaTextCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/config/KaptchaTextCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/config/RuoYiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/config/RuoYiConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/datasource/DynamicDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/datasource/DynamicDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/datasource/DynamicDataSourceContextHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/datasource/DynamicDataSourceContextHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/message/IMessageAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/message/IMessageAutoConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/message/dayu/DayuSmsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/message/dayu/DayuSmsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/message/dayu/DayuSmsConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/message/dayu/DayuSmsConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/message/dayu/SmsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/message/dayu/SmsUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/message/yy/BalanceGetViaAspx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/message/yy/BalanceGetViaAspx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/message/yy/EnsmsSend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/message/yy/EnsmsSend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/message/yy/SSLClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/message/yy/SSLClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/message/yy/SendViaWs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/message/yy/SendViaWs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/message/yy/YySmsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/message/yy/YySmsUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/message/yy/common/DesHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/message/yy/common/DesHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/message/yy/common/MD5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/message/yy/common/MD5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/message/yy/common/YySmsConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/message/yy/common/YySmsConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/message/yy/config/YySmsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/message/yy/config/YySmsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/security/CustomAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/security/CustomAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/security/GrantedAuthorityImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/security/GrantedAuthorityImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/security/PasswordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/security/PasswordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/web/controller/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/domain/AjaxResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/web/domain/AjaxResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/domain/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/web/domain/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/domain/JwtUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/web/domain/JwtUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/exception/DefaultExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/web/exception/DefaultExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/filter/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/web/filter/JWTAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/filter/JWTLoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/web/filter/JWTLoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/handler/CustomAccessDeniedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/web/handler/CustomAccessDeniedHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/handler/CustomAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/web/handler/CustomAuthenticationSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/handler/CustomLogoutSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/web/handler/CustomLogoutSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/page/PageDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/web/page/PageDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/page/TableDataInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/web/page/TableDataInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/page/TableSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/web/page/TableSupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/service/PermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/web/service/PermissionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/framework/web/service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/common/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/common/CommonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/system/config/domain/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/system/config/domain/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/system/config/mapper/ConfigMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/system/config/mapper/ConfigMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/system/config/service/ConfigServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/system/config/service/ConfigServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/system/config/service/IConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/system/config/service/IConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/controller/LogoutController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/controller/MemberCommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/controller/MemberCommonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/domain/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/mapper/MemberMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/mapper/MemberMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/service/IMemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/service/IMemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/service/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/service/MemberServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/memberOrder/controller/MemberOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/memberOrder/controller/MemberOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/memberOrder/domain/MemberOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/memberOrder/domain/MemberOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/memberOrder/mapper/MemberOrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/memberOrder/mapper/MemberOrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/memberOrder/service/IMemberOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/memberOrder/service/IMemberOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/memberOrder/service/MemberOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/memberOrder/service/MemberOrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/smsValidate/domain/SmsValidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/smsValidate/domain/SmsValidate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/smsValidate/mapper/SmsValidateMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/smsValidate/mapper/SmsValidateMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/smsValidate/service/ISmsValidateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/smsValidate/service/ISmsValidateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/smsValidate/service/SmsValidateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/smsValidate/service/SmsValidateServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userTransSerial/controller/UserTransSerialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/userTransSerial/controller/UserTransSerialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userTransSerial/domain/UserTransSerial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/userTransSerial/domain/UserTransSerial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userTransSerial/mapper/UserTransSerialMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/userTransSerial/mapper/UserTransSerialMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userTransSerial/service/IUserTransSerialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/userTransSerial/service/IUserTransSerialService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userTransSerial/service/UserTransSerialServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/userTransSerial/service/UserTransSerialServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userapp/controller/UserAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/userapp/controller/UserAppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userapp/domain/UserApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/userapp/domain/UserApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userapp/mapper/UserAppMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/userapp/mapper/UserAppMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userapp/service/IUserAppService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/userapp/service/IUserAppService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userapp/service/UserAppServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/userapp/service/UserAppServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ehcache/ehcache-shiro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ehcache/ehcache-shiro.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/system/ConfigMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/system/ConfigMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/wallet/MemberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/wallet/MemberMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/wallet/MemberOrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/wallet/MemberOrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/wallet/SmsValidateMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/wallet/SmsValidateMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/wallet/UserAppMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/wallet/UserAppMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/wallet/UserTransSerialMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/wallet/UserTransSerialMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scripts/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scripts/start.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ruoyi/project/wallet/member/controller/CommonControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/biticket/project/wallet/member/controller/CommonControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ruoyi/project/wallet/member/controller/MemberControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/biticket/project/wallet/member/controller/MemberControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/RuoYiApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/RuoYiServletInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/constant/CommonMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/constant/ConfigConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/constant/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/constant/PermissionConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/constant/ScheduleConstants$Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/constant/ScheduleConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/constant/ShiroConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/constant/UserConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/enums/KingoTransTypeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/enums/KingoTypeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/enums/MemberTypeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/enums/SmsTypeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/DemoModeException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/TokenException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/UsernameIsExitedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/base/BaseException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/file/FileNameLengthLimitExceededException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/file/InvalidExtensionException$InvalidFlashExtensionException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/file/InvalidExtensionException$InvalidImageExtensionException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/file/InvalidExtensionException$InvalidMediaExtensionException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/file/InvalidExtensionException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/user/CaptchaException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/user/UserBlockedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/user/UserException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/user/UserNotExistsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/user/UserPasswordNotMatchException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/user/UserPasswordRetryLimitCountException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/exception/user/UserPasswordRetryLimitExceedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/support/CharsetKit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/support/Convert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/support/StrFormatter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/thirdUtil/JsonUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/thirdUtil/XmlUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/AddressUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/ClassUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/DateUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/IpUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/LogUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/MajorKeyUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/MapDataUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/MessageUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/PhoneFormatCheckUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/ServletUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/StringUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/bean/BeanUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/http/HttpUtils$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/http/HttpUtils$TrustAnyHostnameVerifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/http/HttpUtils$TrustAnyTrustManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/http/HttpUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/security/EncryptUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/security/JwtTokenUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/security/PermissionUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/utils/spring/SpringUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/xss/XssFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/common/xss/XssHttpServletRequestWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/aspectj/DsAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/aspectj/lang/annotation/Ds.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/aspectj/lang/annotation/Excel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/aspectj/lang/annotation/Log.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/aspectj/lang/enums/BusinessStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/aspectj/lang/enums/BusinessType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/aspectj/lang/enums/DataSourceType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/aspectj/lang/enums/OperatorType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/config/CaptchaConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/config/DruidConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/config/FilterConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/config/I18nConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/config/KaptchaTextCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/config/RuoYiConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/config/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/datasource/DynamicDataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/datasource/DynamicDataSourceContextHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/message/IMessageAutoConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/message/dayu/DayuSmsConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/message/dayu/DayuSmsConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/message/dayu/SmsUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/message/yy/BalanceGetViaAspx.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/message/yy/EnsmsSend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/message/yy/SSLClient$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/message/yy/SSLClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/message/yy/SendViaWs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/message/yy/YySmsUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/message/yy/common/DesHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/message/yy/common/MD5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/message/yy/common/YySmsConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/message/yy/config/YySmsConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/security/CustomAuthenticationProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/security/GrantedAuthorityImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/security/PasswordService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/security/WebSecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/web/controller/BaseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/web/domain/AjaxResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/web/domain/BaseEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/web/domain/JwtUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/web/exception/DefaultExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/web/filter/JWTAuthenticationFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/web/filter/JWTLoginFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/web/handler/CustomAccessDeniedHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/web/handler/CustomAuthenticationSuccessHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/web/handler/CustomLogoutSuccessHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/web/page/PageDomain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/web/page/TableDataInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/web/page/TableSupport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/web/service/PermissionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/framework/web/service/UserDetailsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/common/CommonController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/system/config/domain/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/system/config/mapper/ConfigMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/system/config/service/ConfigServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/system/config/service/IConfigService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/member/controller/LogoutController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/member/controller/MemberCommonController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/member/controller/MemberController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/member/controller/RegisterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/member/domain/Member.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/member/mapper/MemberMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/member/service/IMemberService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/member/service/MemberServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/memberOrder/controller/MemberOrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/memberOrder/domain/MemberOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/memberOrder/mapper/MemberOrderMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/memberOrder/service/IMemberOrderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/memberOrder/service/MemberOrderServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/smsValidate/domain/SmsValidate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/smsValidate/mapper/SmsValidateMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/smsValidate/service/ISmsValidateService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/smsValidate/service/SmsValidateServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/userTransSerial/controller/UserTransSerialController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/userTransSerial/domain/UserTransSerial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/userTransSerial/mapper/UserTransSerialMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/userTransSerial/service/IUserTransSerialService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/userTransSerial/service/UserTransSerialServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/userapp/controller/UserAppController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/userapp/domain/UserApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/userapp/mapper/UserAppMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/userapp/service/IUserAppService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ruoyi/project/wallet/userapp/service/UserAppServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ruoyi/project/wallet/member/controller/CommonControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ruoyi/project/wallet/member/controller/MemberControllerTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,10 +304,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="MemberController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/controller/MemberController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/controller/MemberController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="403" column="39" lean-forward="true" selection-start-line="403" selection-start-column="39" selection-end-line="403" selection-end-column="39" />
+            <state relative-caret-position="4796">
+              <caret line="399" column="39" selection-start-line="399" selection-start-column="39" selection-end-line="399" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#memberInfo#0;class#MemberController#0" />
@@ -29,62 +318,107 @@
                 <element signature="method#transList#0;class#MemberController#0" />
                 <element signature="method#profitList#0;class#MemberController#0" />
                 <element signature="method#profitTotal#0;class#MemberController#0" />
-                <element signature="e#11355#11372#0" expanded="true" />
+                <element signature="e#13390#13413#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IUserTransSerialService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userTransSerial/service/IUserTransSerialService.java">
+      <file leaf-file-name="RegisterController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/controller/RegisterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="72" column="53" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="53" />
+            <state relative-caret-position="490">
+              <caret line="73" column="41" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserTransSerialServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userTransSerial/service/UserTransSerialServiceImpl.java">
+      <file leaf-file-name="IMemberService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/service/IMemberService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="153" column="40" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="52" />
+            <state relative-caret-position="131">
+              <caret line="36" column="21" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MemberServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/service/MemberServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
               <folding>
-                <element signature="method#selectUserRewardTotal#0;class#UserTransSerialServiceImpl#0" />
+                <element signature="e#2944#2945#0" expanded="true" />
+                <element signature="e#3012#3013#0" expanded="true" />
+                <element signature="e#3479#3480#0" expanded="true" />
+                <element signature="e#3541#3542#0" expanded="true" />
+                <element signature="e#3768#3769#0" expanded="true" />
+                <element signature="e#3834#3835#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserTransSerialMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userTransSerial/mapper/UserTransSerialMapper.java">
+      <file leaf-file-name="Member.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/domain/Member.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserTransSerialMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/wallet/UserTransSerialMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
+            <state relative-caret-position="-87">
+              <caret line="346" column="8" selection-start-line="346" selection-start-column="8" selection-end-line="346" selection-end-column="8" />
               <folding>
-                <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
-                <element signature="n#resultMap#1;n#mapper#0;n#!!top" />
-                <element signature="n#sql#0;n#mapper#0;n#!!top" />
-                <element signature="n#select#0;n#mapper#0;n#!!top" />
-                <element signature="n#select#1;n#mapper#0;n#!!top" />
-                <element signature="n#select#2;n#mapper#0;n#!!top" />
-                <element signature="n#select#3;n#mapper#0;n#!!top" />
-                <element signature="n#select#4;n#mapper#0;n#!!top" />
-                <element signature="n#insert#0;n#mapper#0;n#!!top" />
-                <element signature="n#update#0;n#mapper#0;n#!!top" />
-                <element signature="n#delete#1;n#mapper#0;n#!!top" />
-                <element signature="n#update#1;n#mapper#0;n#!!top" />
-                <element signature="n#insert#1;n#mapper#0;n#!!top" />
+                <element signature="e#6862#6863#0" expanded="true" />
+                <element signature="e#6900#6901#0" expanded="true" />
+                <element signature="e#6938#6939#0" expanded="true" />
+                <element signature="e#6968#6969#0" expanded="true" />
+                <element signature="e#7035#7036#0" expanded="true" />
+                <element signature="e#7087#7088#0" expanded="true" />
+                <element signature="e#7136#7137#0" expanded="true" />
+                <element signature="e#7173#7174#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/system/ConfigMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="52" column="8" selection-start-line="52" selection-end-line="52" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ehcache-shiro.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/ehcache/ehcache-shiro.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="82">
+              <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BiticketApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/BiticketApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BiticketServletInitializer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/BiticketServletInitializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -102,7 +436,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>project.artifactId</find>
       <find>.artifactId</find>
       <find>artifactId</find>
       <find>app.version.type</find>
@@ -132,6 +465,7 @@
       <find>selectUserTransSerialByTransNo</find>
       <find>changeMemberAmount</find>
       <find>updateBatchTransStatus</find>
+      <find>ruoyi</find>
     </findStrings>
     <replaceStrings>
       <replace>StringUtils.</replace>
@@ -139,6 +473,9 @@
       <replace>jdbc.datasource</replace>
       <replace>kingo.</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>E:\project\business\Biticket\Code\API</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -146,11 +483,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scripts/start.sh" />
-        <option value="$PROJECT_DIR$/src/main/assembly/local.properties" />
-        <option value="$PROJECT_DIR$/src/main/assembly/assembly.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/config/logback.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/memberOrder/domain/MemberOrder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/memberOrder/controller/MemberController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/memberOrder/controller/MemverOrderController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/memberOrder/service/MemberOrderServiceImpl.java" />
@@ -181,14 +513,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userapp/mapper/UserAppMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/controller/MemberCommonController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/filter/JWTLoginFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config/application.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/filter/JWTAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userTransSerial/controller/UserTransSerialController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/common/constant/ConfigConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/service/IMemberService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/service/MemberServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/mapper/MemberMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/wallet/MemberMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/TokenException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/UsernameIsExitedException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/common/enums/KingoTransTypeEnum.java" />
@@ -197,6 +527,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/controller/MemberController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userTransSerial/service/UserTransSerialServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/wallet/UserTransSerialMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/wallet/MemberMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/biticket/BiticketApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/biticket/BiticketServletInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/resources/ehcache/ehcache-shiro.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/domain/Member.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/service/MemberServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -211,11 +548,11 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="RuoYiWeb" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="API" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="RuoYiWeb" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="API" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
@@ -234,6 +571,101 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="biticket" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="biticket" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="biticket" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="wallet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="biticket" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="wallet" type="462c0819:PsiDirectoryNode" />
+              <item name="member" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="biticket" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="wallet" type="462c0819:PsiDirectoryNode" />
+              <item name="member" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -255,44 +687,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KingoAPI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KingoAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KingoAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KingoAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RuoYiManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Manager" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -335,36 +738,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RuoYiApplication">
-    <configuration name="RuoYiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ruoyi.RuoYiApplication" />
+  <component name="RunManager" selected="Application.BiticketApplication">
+    <configuration name="BiticketApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.biticket.BiticketApplication" />
       <module name="API" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ruoyi.*" />
+          <option name="PATTERN" value="com.biticket.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
     <configuration name="SendViaWs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ruoyi.framework.message.yy.SendViaWs" />
+      <option name="MAIN_CLASS_NAME" value="com.biticket.framework.message.yy.SendViaWs" />
       <module name="API" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ruoyi.framework.message.yy.*" />
+          <option name="PATTERN" value="com.biticket.framework.message.yy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
     <configuration name="YySmsUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ruoyi.framework.message.yy.YySmsUtil" />
+      <option name="MAIN_CLASS_NAME" value="com.biticket.framework.message.yy.YySmsUtil" />
       <module name="API" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ruoyi.framework.message.yy.*" />
+          <option name="PATTERN" value="com.biticket.framework.message.yy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -465,13 +868,13 @@
     <list>
       <item itemvalue="Maven.package" />
       <item itemvalue="Maven.install" />
-      <item itemvalue="Application.RuoYiApplication" />
+      <item itemvalue="Application.BiticketApplication" />
       <item itemvalue="Application.YySmsUtil" />
       <item itemvalue="Application.SendViaWs" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RuoYiApplication" />
+        <item itemvalue="Application.BiticketApplication" />
         <item itemvalue="Application.YySmsUtil" />
         <item itemvalue="Application.SendViaWs" />
       </list>
@@ -516,6 +919,7 @@
       <workItem from="1538121550412" duration="3048000" />
       <workItem from="1538119998074" duration="4142000" />
       <workItem from="1538184545144" duration="8151000" />
+      <workItem from="1541148505438" duration="1830000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1537943307127</created>
@@ -542,7 +946,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185656000" />
+    <option name="totallyTimeSpent" value="187486000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -563,42 +967,42 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.10924933" />
+      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.10924933" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34268832" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3293944" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41211227" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32791728" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23726542" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2386059" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32890856" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.55243725" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40768096" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.34564254" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.34564254" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32890856" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.081120946" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20375335" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.081120946" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -611,7 +1015,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.41740412" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32890856" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.42625368" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info id="Favorites" order="6" side_tool="true" />
@@ -633,73 +1037,73 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/controller/LogoutController.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/controller/LogoutController.java</url>
           <line>48</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/service/MemberServiceImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/service/MemberServiceImpl.java</url>
           <line>115</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/security/CustomAuthenticationProvider.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/biticket/framework/security/CustomAuthenticationProvider.java</url>
           <line>74</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/security/CustomAuthenticationProvider.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/biticket/framework/security/CustomAuthenticationProvider.java</url>
           <line>79</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/security/WebSecurityConfig.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/biticket/framework/security/WebSecurityConfig.java</url>
           <line>75</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/security/CustomAuthenticationProvider.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/biticket/framework/security/CustomAuthenticationProvider.java</url>
           <line>41</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/domain/JwtUser.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/biticket/framework/web/domain/JwtUser.java</url>
           <line>27</line>
           <properties />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/controller/MemberController.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/controller/MemberController.java</url>
           <line>204</line>
           <properties />
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/controller/LogoutController.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/controller/LogoutController.java</url>
           <line>46</line>
           <properties />
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userTransSerial/service/UserTransSerialServiceImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/userTransSerial/service/UserTransSerialServiceImpl.java</url>
           <line>123</line>
           <properties />
           <option name="timeStamp" value="111" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/filter/JWTAuthenticationFilter.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/biticket/framework/web/filter/JWTAuthenticationFilter.java</url>
           <line>66</line>
           <properties />
           <option name="timeStamp" value="120" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/filter/JWTAuthenticationFilter.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/biticket/framework/web/filter/JWTAuthenticationFilter.java</url>
           <line>121</line>
           <properties />
           <option name="timeStamp" value="121" />
@@ -743,63 +1147,7 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/math/BigDecimal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46494">
-          <caret line="2272" column="28" selection-start-line="2272" selection-start-column="28" selection-end-line="2272" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/utils/MajorKeyUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-          <folding>
-            <element signature="e#1004#1005#0" expanded="true" />
-            <element signature="e#1043#1044#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userTransSerial/domain/UserTransSerial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="45" column="30" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="30" />
-          <folding>
-            <element signature="e#2803#2804#0" expanded="true" />
-            <element signature="e#2838#2839#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/system/config/service/IConfigService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/system/config/service/ConfigServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="115" column="29" selection-start-line="115" selection-start-column="29" selection-end-line="115" selection-end-column="29" />
-          <folding>
-            <element signature="e#3122#3123#0" expanded="true" />
-            <element signature="e#3175#3176#0" expanded="true" />
-            <element signature="e#3352#3353#0" expanded="true" />
-            <element signature="e#3393#3394#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/web/domain/AjaxResult.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/framework/web/domain/AjaxResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
@@ -812,13 +1160,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/service/IMemberService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="88" column="26" lean-forward="true" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/function/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -826,182 +1167,168 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/security/PasswordService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/framework/security/PasswordService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/security/GrantedAuthorityImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/framework/security/GrantedAuthorityImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/security/CustomAuthenticationProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/framework/security/CustomAuthenticationProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/RuoYiServletInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/RuoYiApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/security/WebSecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/framework/security/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="69" column="5" lean-forward="true" selection-start-line="58" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/enums/MemberTypeEnum.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/enums/MemberTypeEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/enums/SmsTypeEnum.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/enums/SmsTypeEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/file/FileNameLengthLimitExceededException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/exception/file/FileNameLengthLimitExceededException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/file/InvalidExtensionException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/exception/file/InvalidExtensionException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/DemoModeException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/exception/DemoModeException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/TokenException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/exception/TokenException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/UsernameIsExitedException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/exception/UsernameIsExitedException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/user/CaptchaException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/exception/user/CaptchaException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/aspectj/lang/enums/BusinessStatus.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/framework/aspectj/lang/enums/BusinessStatus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/aspectj/lang/enums/DataSourceType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/framework/aspectj/lang/enums/DataSourceType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/aspectj/lang/enums/OperatorType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/framework/aspectj/lang/enums/OperatorType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/framework/aspectj/lang/enums/BusinessType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/framework/aspectj/lang/enums/BusinessType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1113">
           <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/constant/ConfigConstants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/constant/ConfigConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/constant/CommonMap.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/constant/CommonMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/constant/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/constant/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-252">
           <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/constant/PermissionConstants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/constant/PermissionConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/constant/ScheduleConstants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/constant/ScheduleConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/constant/ShiroConstants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/constant/ShiroConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-738">
           <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/base/BaseException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/exception/base/BaseException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/enums/KingoTypeEnum.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/enums/KingoTypeEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-105">
           <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
@@ -1012,7 +1339,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/user/UserException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/exception/user/UserException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
@@ -1023,7 +1350,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/user/UserBlockedException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/exception/user/UserBlockedException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -1034,109 +1361,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/user/UserNotExistsException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/exception/user/UserNotExistsException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/user/UserPasswordRetryLimitCountException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/exception/user/UserPasswordRetryLimitCountException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/user/UserPasswordNotMatchException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/exception/user/UserPasswordNotMatchException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/exception/user/UserPasswordRetryLimitExceedException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/exception/user/UserPasswordRetryLimitExceedException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/constant/UserConstants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/constant/UserConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1155">
           <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/wallet/MemberMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="259" column="13" lean-forward="true" selection-start-line="245" selection-start-column="3" selection-end-line="259" selection-end-column="13" />
-          <folding>
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#2;n#mapper#0;n#!!top" />
-            <element signature="n#trim#0;n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#trim#1;n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#trim#0;n#update#0;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/service/MemberServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-          <folding>
-            <element signature="e#4385#4386#0" expanded="true" />
-            <element signature="e#4451#4452#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/mapper/MemberMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/mapper/MemberMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/common/enums/KingoTransTypeEnum.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/common/enums/KingoTransTypeEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-87">
           <caret line="23" column="7" lean-forward="true" selection-end-line="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/member/controller/MemberController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/userTransSerial/service/IUserTransSerialService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="403" column="39" lean-forward="true" selection-start-line="403" selection-start-column="39" selection-end-line="403" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#memberInfo#0;class#MemberController#0" />
-            <element signature="docComment;method#fansCount#0;class#MemberController#0" />
-            <element signature="method#fansCount#0;class#MemberController#0" />
-            <element signature="method#fanList#0;class#MemberController#0" />
-            <element signature="method#preDayOutPut#0;class#MemberController#0" />
-            <element signature="method#transList#0;class#MemberController#0" />
-            <element signature="method#profitList#0;class#MemberController#0" />
-            <element signature="method#profitTotal#0;class#MemberController#0" />
-            <element signature="e#11355#11372#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userTransSerial/service/IUserTransSerialService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="1428">
           <caret line="72" column="53" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userTransSerial/service/UserTransSerialServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/userTransSerial/service/UserTransSerialServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
+        <state relative-caret-position="2436">
           <caret line="153" column="40" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="52" />
           <folding>
             <element signature="method#selectUserRewardTotal#0;class#UserTransSerialServiceImpl#0" />
@@ -1144,9 +1427,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ruoyi/project/wallet/userTransSerial/mapper/UserTransSerialMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/userTransSerial/mapper/UserTransSerialMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
+        <state relative-caret-position="210">
           <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
         </state>
       </provider>
@@ -1154,7 +1437,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/wallet/UserTransSerialMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
-          <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
+          <caret line="153" selection-start-line="153" selection-end-line="153" />
           <folding>
             <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
             <element signature="n#resultMap#1;n#mapper#0;n#!!top" />
@@ -1169,6 +1452,124 @@
             <element signature="n#delete#1;n#mapper#0;n#!!top" />
             <element signature="n#update#1;n#mapper#0;n#!!top" />
             <element signature="n#insert#1;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/wallet/MemberMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1533">
+          <caret line="169" column="4" lean-forward="true" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="4" />
+          <folding>
+            <element signature="n#select#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/BiticketServletInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/BiticketApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/system/ConfigMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="52" column="8" selection-start-line="52" selection-end-line="52" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ehcache/ehcache-shiro.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/controller/MemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4796">
+          <caret line="399" column="39" selection-start-line="399" selection-start-column="39" selection-end-line="399" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#memberInfo#0;class#MemberController#0" />
+            <element signature="docComment;method#fansCount#0;class#MemberController#0" />
+            <element signature="method#fansCount#0;class#MemberController#0" />
+            <element signature="method#fanList#0;class#MemberController#0" />
+            <element signature="method#preDayOutPut#0;class#MemberController#0" />
+            <element signature="method#transList#0;class#MemberController#0" />
+            <element signature="method#profitList#0;class#MemberController#0" />
+            <element signature="method#profitTotal#0;class#MemberController#0" />
+            <element signature="e#13390#13413#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/domain/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-87">
+          <caret line="346" column="8" selection-start-line="346" selection-start-column="8" selection-end-line="346" selection-end-column="8" />
+          <folding>
+            <element signature="e#6862#6863#0" expanded="true" />
+            <element signature="e#6900#6901#0" expanded="true" />
+            <element signature="e#6938#6939#0" expanded="true" />
+            <element signature="e#6968#6969#0" expanded="true" />
+            <element signature="e#7035#7036#0" expanded="true" />
+            <element signature="e#7087#7088#0" expanded="true" />
+            <element signature="e#7136#7137#0" expanded="true" />
+            <element signature="e#7173#7174#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/controller/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="73" column="41" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/service/IMemberService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biticket/project/wallet/member/service/MemberServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+          <folding>
+            <element signature="e#2944#2945#0" expanded="true" />
+            <element signature="e#3012#3013#0" expanded="true" />
+            <element signature="e#3479#3480#0" expanded="true" />
+            <element signature="e#3541#3542#0" expanded="true" />
+            <element signature="e#3768#3769#0" expanded="true" />
+            <element signature="e#3834#3835#0" expanded="true" />
           </folding>
         </state>
       </provider>
