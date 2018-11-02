@@ -10,7 +10,7 @@ public class JwtTokenUtils {
     public static final String TOKEN_HEADER = "Authorization";
     public static final String TOKEN_PREFIX = "Bearer ";
 
-    private static final String SECRET = "spring-security-@Jwt!&Secret^#";
+    private static final String SECRET = "spring-security-@Jwt!Biticket&Secret^#";
     private static final String ISS = "kingo";
 
     // 过期时间是3600秒，既是1个小时
