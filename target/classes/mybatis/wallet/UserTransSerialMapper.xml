@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.project.wallet.userTransSerial.mapper.UserTransSerialMapper">
+
+    <resultMap type="UserTransSerial" id="UserTransSerialResult">
+        <result property="transId" column="trans_id"/>
+        <result property="dealNo" column="deal_no"/>
+        <result property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+        <result property="userType" column="user_type"/>
+        <result property="userMobile" column="user_mobile"/>
+        <result property="preAmount" column="pre_amount"/>
+        <result property="amount" column="amount"/>
+        <result property="amountRemark" column="amount_remark"/>
+        <result property="amountDate" column="amount_date"/>
+        <result property="transStatus" column="trans_status"/>
+        <result property="amountType" column="amount_type"/>
+        <result property="delFlag" column="del_flag"/>
+    </resultMap>
+    <resultMap  type="UserTransSerial" id="UserTransSerialCount">
+        <result property="amount" column="amount"/>
+    </resultMap>
+    <sql id="selectUserTransSerialVo">
+        select trans_id, deal_no, user_id, user_name, user_type, user_mobile, pre_amount, amount, amount_remark, amount_date, trans_status, del_flag from ats_user_trans_serial
+    </sql>
+    <select id="selectMemberPreDayOutById" parameterType="Integer" resultType ="BigDecimal">
+      select ifnull(sum(amount),0) as amount from ats_user_trans_serial where date(amount_date) = date_sub(curdate(),interval 1 day) and  user_id = #{userId}
+      and del_flag=0 ;
+</select>
+
+    <select id="selectUserTransSerialList" parameterType="UserTransSerial" resultMap="UserTransSerialResult">
+        <include refid="selectUserTransSerialVo"/>
+        <where>
+            <if test="transId != null and transId != ''">and trans_id = #{transId}</if>
+            <if test="dealNo != null and dealNo != ''">and deal_no = #{dealNo}</if>
+            <if test="userId != null and userId != ''">and user_id = #{userId}</if>
+            <if test="userName != null and userName != ''">and user_name = #{userName}</if>
+            <if test="userType != null and userType != ''">and user_type = #{userType}</if>
+            <if test="userMobile != null and userMobile != ''">and user_mobile = #{userMobile}</if>
+            <if test="preAmount != null and preAmount != ''">and pre_amount = #{preAmount}</if>
+            <if test="amount != null and amount != ''">and amount = #{amount}</if>
+            <if test="amountRemark != null and amountRemark != ''">and amount_remark = #{amountRemark}</if>
+            <if test="amountDate != null and amountDate != ''">and amount_date = #{amountDate}</if>
+            <if test="transStatus != null and transStatus != ''">and trans_status = #{transStatus}</if>
+            <if test="amountType != null and amountType != ''">and amount_type = #{amountType}</if>
+            and del_flag = 0
+        </where>
+    </select>
+
+    <select id="selectUserTransSerialListByStatus" resultMap="UserTransSerialResult">
+        <include refid="selectUserTransSerialVo"/>
+        where
+            user_id = #{userId}
+            and amount_type in
+            <foreach item="transId" collection="status" open="(" separator="," close=")">
+                #{transId}
+            </foreach>
+            and del_flag = 0
+
+    </select>
+    <select id="selectUserTransSerialListByStatusTotal" resultType="BigDecimal">
+        select ifnull(sum(amount),0) as amount from ats_user_trans_serial
+        where
+        user_id = #{userId}
+        and amount_type in
+        <foreach item="item" collection="status" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+        and del_flag = 0
+
+    </select>
+
+
+    <select id="selectUserTransSerialById" parameterType="Long" resultMap="UserTransSerialResult">
+        <include refid="selectUserTransSerialVo"/>
+        where trans_id = #{transId} and del_flag = 0
+    </select>
+
+    <insert id="insertUserTransSerial" parameterType="UserTransSerial">
+        insert into ats_user_trans_serial
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="transId != null and transId != '' ">trans_id,</if>
+            <if test="dealNo != null and dealNo != '' ">deal_no,</if>
+            <if test="userId != null and userId != '' ">user_id,</if>
+            <if test="userName != null and userName != '' ">user_name,</if>
+            <if test="userType != null and userType != '' ">user_type,</if>
+            <if test="userMobile != null and userMobile != '' ">user_mobile,</if>
+            <if test="preAmount != null and preAmount != '' ">pre_amount,</if>
+            <if test="amount != null and amount != '' ">amount,</if>
+            <if test="amountRemark != null and amountRemark != '' ">amount_remark,</if>
+            <if test="amountDate != null and amountDate != '' ">amount_date,</if>
+            <if test="transStatus != null and transStatus != '' ">trans_status,</if>
+            <if test="delFlag != null and delFlag != '' ">del_flag,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="transId != null and transId != ''">#{transId},</if>
+            <if test="dealNo != null and dealNo != ''">#{dealNo},</if>
+            <if test="userId != null and userId != ''">#{userId},</if>
+            <if test="userName != null and userName != ''">#{userName},</if>
+            <if test="userType != null and userType != ''">#{userType},</if>
+            <if test="userMobile != null and userMobile != ''">#{userMobile},</if>
+            <if test="preAmount != null and preAmount != ''">#{preAmount},</if>
+            <if test="amount != null and amount != ''">#{amount},</if>
+            <if test="amountRemark != null and amountRemark != ''">#{amountRemark},</if>
+            <if test="amountDate != null and amountDate != ''">#{amountDate},</if>
+            <if test="transStatus != null and transStatus != ''">#{transStatus},</if>
+            <if test="delFlag != null and delFlag != ''">#{delFlag},</if>
+        </trim>
+    </insert>
+
+    <update id="updateUserTransSerial" parameterType="UserTransSerial">
+        update ats_user_trans_serial
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="dealNo != null  and dealNo != ''  ">deal_no = #{dealNo},</if>
+            <if test="userId != null  ">user_id = #{userId},</if>
+            <if test="userName != null  and userName != ''  ">user_name = #{userName},</if>
+            <if test="userType != null  ">user_type = #{userType},</if>
+            <if test="userMobile != null  and userMobile != ''  ">user_mobile = #{userMobile},</if>
+            <if test="preAmount != null  ">pre_amount = #{preAmount},</if>
+            <if test="amount != null  ">amount = #{amount},</if>
+            <if test="amountRemark != null  and amountRemark != ''  ">amount_remark = #{amountRemark},</if>
+            <if test="amountDate != null  ">amount_date = #{amountDate},</if>
+            <if test="transStatus != null  ">trans_status = #{transStatus},</if>
+            <if test="amountType != null and amountType != ''">and amount_type = #{amountType},</if>
+            <if test="delFlag != null  ">del_flag = #{delFlag},</if>
+        </trim>
+        where trans_id = #{transId} and del_flag = 0
+    </update>
+
+    <delete id="deleteUserTransSerialById" parameterType="Long">
+        update ats_user_trans_serial set del_flag=1 where trans_id = #{transId}  and del_flag = 0
+    </delete>
+
+    <delete id="deleteUserTransSerialByIds" parameterType="String">
+        update ats_user_trans_serial set del_flag=1 where trans_id in
+        <foreach item="transId" collection="array" open="(" separator="," close=")">
+            #{transId}
+        </foreach>
+        and del_flag = 0
+    </delete>
+    <insert id="insertBatch" parameterType="java.util.List">
+        insert into ats_user_trans_serial
+        (
+        deal_no,
+        user_id,
+        user_name,
+        user_type,
+        user_mobile,
+        pre_amount,
+        amount,
+        amount_remark,
+        amount_date,
+        trans_status,
+        amount_type
+        ) values
+        <foreach collection="serialList" item="s" separator="," close=""
+                 open="">
+            (
+            #{s.dealNo,jdbcType=BIGINT},
+            #{s.userId,jdbcType=BIGINT},
+            #{s.userName,jdbcType=VARCHAR},
+            #{s.userType,jdbcType=TINYINT},
+            #{s.userMobile,jdbcType=VARCHAR},
+            #{s.preAmount,jdbcType=DECIMAL},
+            #{s.amount,jdbcType=DECIMAL},
+            #{s.amountRemark,jdbcType=VARCHAR},
+            NOW(),
+            #{s.transStatus,jdbcType=TINYINT},
+            #{s.amountType,jdbcType=TINYINT}
+            )
+        </foreach>
+    </insert>
+
+</mapper>

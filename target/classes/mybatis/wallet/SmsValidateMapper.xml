@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.project.wallet.smsValidate.mapper.SmsValidateMapper">
+    
+    <resultMap type="SmsValidate" id="SmsValidateResult">
+        <result property="smsId"    column="sms_id"    />
+        <result property="smsType"    column="sms_type"    />
+        <result property="userId"    column="user_id"    />
+        <result property="mobileNumber"    column="mobile_number"  />
+        <result property="validateCode"    column="validate_code"    />
+        <result property="smsContent"    column="sms_content"    />
+        <result property="expireTime"    column="expire_time"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="sended"    column="sended"    />
+        <result property="delFlag"    column="del_flag"    />
+    </resultMap>
+	
+	<sql id="selectSmsValidateVo">
+        select sms_id, sms_type, user_id, mobile_number, validate_code, sms_content, expire_time, create_time, sended, del_flag from sys_sms_validate
+    </sql>
+	
+    <select id="selectSmsValidateList" parameterType="SmsValidate" resultMap="SmsValidateResult">
+        <include refid="selectSmsValidateVo"/>
+        <where>  
+            <if test="smsId != null and smsId != ''"> and sms_id = #{smsId}</if>
+             <if test="smsType != null and smsType != ''"> and sms_type = #{smsType}</if>
+             <if test="userId != null and userId != ''"> and user_id = #{userId}</if>
+             <if test="mobileNumber != null and mobileNumber != ''"> and mobile_number = #{mobileNumber}</if>
+             <if test="validateCode != null and validateCode != ''"> and validate_code = #{validateCode}</if>
+             <if test="smsContent != null and smsContent != ''"> and sms_content = #{smsContent}</if>
+             <if test="expireTime != null and expireTime != ''"> and expire_time = #{expireTime}</if>
+             <if test="createTime != null and createTime != ''"> and create_time = #{createTime}</if>
+             <if test="sended != null and sended != ''"> and sended = #{sended}</if>
+             <if test="delFlag != null and delFlag != ''"> and del_flag = #{delFlag}</if>
+         </where>
+    </select>
+    
+    <select id="selectSmsValidateById" parameterType="Long" resultMap="SmsValidateResult">
+        <include refid="selectSmsValidateVo"/>
+        where sms_id = #{smsId}
+    </select>
+    <!--获取最验证码-->
+    <select id="selectSmsValidateByMobile" parameterType="SmsValidate" resultMap="SmsValidateResult">
+        <include refid="selectSmsValidateVo"/>
+        <where>
+            <if test="smsId != null and smsId != ''"> and sms_id = #{smsId}</if>
+            <if test="smsType != null and smsType != ''"> and sms_type = #{smsType}</if>
+            <if test="userId != null and userId != ''"> and user_id = #{userId}</if>
+            <if test="mobileNumber != null and mobileNumber != ''"> and mobile_number = #{mobileNumber}</if>
+            <if test="validateCode != null and validateCode != ''"> and validate_code = #{validateCode}</if>
+            <if test="smsContent != null and smsContent != ''"> and sms_content = #{smsContent}</if>
+            <if test="expireTime != null and expireTime != ''"> and expire_time = #{expireTime}</if>
+            <if test="createTime != null and createTime != ''"> and create_time = #{createTime}</if>
+            <if test="sended != null and sended != ''"> and sended = #{sended}</if>
+            and del_flag = 0
+        </where>
+        order by sms_id desc limit 1
+    </select>
+    <insert id="insertSmsValidate" parameterType="SmsValidate">
+        insert into sys_sms_validate
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="smsId != null and smsId != '' ">sms_id,</if>
+			<if test="smsType != null and smsType != '' ">sms_type,</if>
+			<if test="userId != null and userId != '' ">user_id,</if>
+			<if test="mobileNumber != null and mobileNumber != '' ">mobile_number,</if>
+			<if test="validateCode != null and validateCode != '' ">validate_code,</if>
+			<if test="smsContent != null and smsContent != '' ">sms_content,</if>
+			expire_time,
+			create_time,
+			<if test="sended != null and sended != '' ">sended,</if>
+			<if test="delFlag != null and delFlag != '' ">del_flag,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="smsId != null and smsId != ''">#{smsId},</if>
+			<if test="smsType != null and smsType != ''">#{smsType},</if>
+			<if test="userId != null and userId != ''">#{userId},</if>
+			<if test="mobileNumber != null and mobileNumber != ''">#{mobileNumber},</if>
+			<if test="validateCode != null and validateCode != ''">#{validateCode},</if>
+			<if test="smsContent != null and smsContent != ''">#{smsContent},</if>
+            date_add(now(), interval 10 minute),
+            now(),
+			<if test="sended != null and sended != ''">#{sended},</if>
+			<if test="delFlag != null and delFlag != ''">#{delFlag},</if>
+         </trim>
+    </insert>
+	 
+    <update id="updateSmsValidate" parameterType="SmsValidate">
+        update sys_sms_validate
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="smsType != null  ">sms_type = #{smsType},</if>
+            <if test="userId != null  ">user_id = #{userId},</if>
+            <if test="mobileNumber != null  and mobileNumber != ''  ">mobile_number = #{mobileNumber},</if>
+            <if test="validateCode != null  and validateCode != ''  ">validate_code = #{validateCode},</if>
+            <if test="smsContent != null  and smsContent != ''  ">sms_content = #{smsContent},</if>
+            <if test="expireTime != null  ">expire_time = #{expireTime},</if>
+            <if test="createTime != null  ">create_time = #{createTime},</if>
+            <if test="sended != null  ">sended = #{sended},</if>
+            <if test="delFlag != null  ">del_flag = #{delFlag},</if>
+        </trim>
+        where sms_id = #{smsId}
+    </update>
+
+	<delete id="deleteSmsValidateById" parameterType="Long">
+        update   sys_sms_validate set del_flag =1 where sms_id = #{smsId}
+    </delete>
+	
+    <delete id="deleteSmsValidateByIds" parameterType="String">
+        update  sys_sms_validate set del_flag =1  where sms_id in
+        <foreach item="smsId" collection="array" open="(" separator="," close=")">
+            #{smsId}
+        </foreach>
+    </delete>
+    
+</mapper>

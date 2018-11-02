@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.project.wallet.userapp.mapper.UserAppMapper">
+    
+    <resultMap type="UserApp" id="UserAppResult">
+        <result property="appId"    column="app_id"    />
+        <result property="apkType"    column="apk_type"    />
+        <result property="versionId"    column="version_id"    />
+        <result property="remark"    column="remark"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="appUrl"    column="app_url"    />
+        <result property="isUpdate"    column="is_update"    />
+        <result property="appType"    column="app_type"    />
+        <result property="delFlag"    column="del_flag"    />
+    </resultMap>
+	
+	<sql id="selectUserAppVo">
+        select app_id, apk_type, version_id, remark, create_time, create_by, app_url, is_update, app_type, del_flag from sys_user_app
+    </sql>
+	
+    <select id="selectUserAppList" parameterType="UserApp" resultMap="UserAppResult">
+        <include refid="selectUserAppVo"/>
+        <where>  
+            <if test="appId != null and appId != ''"> and app_id = #{appId}</if>
+             <if test="apkType != null and apkType != ''"> and apk_type = #{apkType}</if>
+             <if test="versionId != null and versionId != ''"> and version_id = #{versionId}</if>
+             <if test="remark != null and remark != ''"> and remark = #{remark}</if>
+             <if test="createTime != null and createTime != ''"> and create_time = #{createTime}</if>
+             <if test="createBy != null and createBy != ''"> and create_by = #{createBy}</if>
+             <if test="appUrl != null and appUrl != ''"> and app_url = #{appUrl}</if>
+             <if test="isUpdate != null and isUpdate != ''"> and is_update = #{isUpdate}</if>
+             <if test="appType != null and appType != ''"> and app_type = #{appType}</if>
+             <if test="delFlag != null and delFlag != ''"> and del_flag = #{delFlag}</if>
+         </where>
+    </select>
+    
+    <select id="selectUserAppById" parameterType="Integer" resultMap="UserAppResult">
+        <include refid="selectUserAppVo"/>
+        where app_id = #{appId}
+    </select>
+    <select id="selectUserAppLasterRelease"  resultMap="UserAppResult">
+        <include refid="selectUserAppVo"/>
+        where apk_type=#{apkType} and app_type=#{appType}
+        and del_flag=0
+        order by create_time desc limit 1
+    </select>
+    
+</mapper>
