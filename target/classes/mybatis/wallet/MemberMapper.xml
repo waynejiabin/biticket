@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ruoyi.project.wallet.member.mapper.MemberMapper">
+<mapper namespace="com.biticket.project.wallet.member.mapper.MemberMapper">
 
     <resultMap type="Member" id="MemberResult">
         <result property="memberId" column="member_id"/>
@@ -27,6 +27,8 @@
         <result property="loginTime" column="login_time"/>
         <result property="remark" column="remark"/>
         <result property="delFlag" column="del_flag"/>
+        <result property="realIds" column="real_ids"/>
+        <result property="integralAmount" column="integral_amount"/>
     </resultMap>
 
     <resultMap type="Member" id="MemberBaseResult">
@@ -39,15 +41,17 @@
         <result property="createTime" column="create_time"/>
     </resultMap>
     <sql id="selectMemberVo">
-        select member_id, login_name, member_password, salt, trade_password, nick_name, member_type, member_status, member_mobile, p_id, partner_id, community_id, amount_total, amount_available, amount_frozen, amount_config, wallet_address, create_time, login_ip, login_time, remark, del_flag from ats_member
+        select member_id, login_name, member_password, salt, trade_password, nick_name, member_type, member_status,
+        member_mobile, p_id, partner_id, community_id, amount_total, amount_available, amount_frozen, amount_config,
+        wallet_address, create_time, login_ip, login_time, remark, del_flag , real_ids, integral_amount from ats_member
     </sql>
 
     <select id="selectMemberCount" resultType="Integer">
         select count(1) as fansCount from ats_member where p_id=#{memberId} and del_flag=0
     </select>
     <select id="selectMemberList" parameterType="Member" resultMap="MemberResult">
-        select member_id, login_name,   nick_name, member_type, member_status, member_mobile,p_id,
-        getMemberMobileById(p_id) as parenter, partner_id,getMemberMobileById(partner_id) as  partner,
+        select member_id, login_name, nick_name, member_type, member_status, member_mobile,p_id,
+        getMemberMobileById(p_id) as parenter, partner_id,getMemberMobileById(partner_id) as partner,
         community_id ,getMemberMobileById(community_id) as community, amount_total, amount_available,
         amount_frozen, amount_config, wallet_address, create_time, login_ip, login_time, remark, del_flag
         from ats_member
@@ -55,7 +59,7 @@
             <if test="memberId != null and memberId != ''">and member_id = #{memberId}</if>
             <if test="loginName != null and loginName != ''">
                 AND login_name like concat('%', #{loginName}, '%')
-                </if>
+            </if>
 
             <if test="nickName != null and nickName != ''">
                 and nick_name like concat('%', #{nickName}, '%')
@@ -98,7 +102,7 @@
     </select>
 
     <select id="selectChilderMemberList" parameterType="Member" resultMap="MemberBaseResult">
-        select member_id, login_name, nick_name, member_type,  member_mobile, create_time
+        select member_id, login_name, nick_name, member_type, member_mobile, create_time
         from ats_member
         <where>
             <if test="loginName != null and loginName != ''">
@@ -188,6 +192,8 @@
             <if test="loginTime != null and loginTime != '' ">login_time,</if>
             <if test="remark != null and remark != '' ">remark,</if>
             <if test="delFlag != null and delFlag != '' ">del_flag,</if>
+            <if test="realIds != null and realIds != '' ">real_ids,</if>
+            <if test="integralAmount != null and integralAmount != '' ">integral_amount,</if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="memberId != null and memberId != ''">#{memberId},</if>
@@ -212,6 +218,8 @@
             <if test="loginTime != null and loginTime != ''">#{loginTime},</if>
             <if test="remark != null and remark != ''">#{remark},</if>
             <if test="delFlag != null and delFlag != ''">#{delFlag},</if>
+            <if test="realIds != null and realIds != ''">#{realIds},</if>
+            <if test="integralAmount != null and integralAmount != ''">#{integralAmount},</if>
         </trim>
     </insert>
 
@@ -238,22 +246,27 @@
             <if test="loginIp != null  and loginIp != ''  ">login_ip = #{loginIp},</if>
             <if test="loginTime != null  ">login_time = #{loginTime},</if>
             <if test="remark != null  and remark != ''  ">remark = #{remark},</if>
-
+            <if test="realIds != null and realIds != ''"> and real_ids = #{realIds}</if>
+            <if test="integralAmount != null and integralAmount != ''"> and integral_amount = #{integralAmount}</if>
         </trim>
         where member_id = #{memberId} and del_flag = 0
     </update>
 
-   <!-- <delete id="deleteMemberById" parameterType="Integer">
-       update ats_member set del_flag=1 where member_id = #{memberId}  and del_flag = 0
-    </delete>
-
-    <delete id="deleteMemberByIds" parameterType="String">
-        update ats_member set del_flag=1 where member_id in
-        <foreach item="memberId" collection="array" open="(" separator="," close=")">
-            #{memberId}
+    <update id="changeMemberAmount" parameterType="java.util.List">
+        update ats_member
+        <foreach collection="memberList" item="item" index="index"
+                 separator=" " open="case ID" close="end">
+            set amount_total = amount_total+( when #{item.memberId} then #{item.amountTotal}),
+            amount_frozen = amount_frozen +( when #{item.memberId} then #{item.amountFrozen}),
+            amount_available = amount_available + (when #{item.memberId} then #{item.amountAvailable});
         </foreach>
-        and del_flag = 0
-    </delete>-->
+        where member_id in
+        <foreach collection="list" index="index" item="item"
+                 separator="," open="(" close=")">
+            #{item.memberId,jdbcType=BIGINT}
+        </foreach>
+
+    </update>
 
 
     <select id="getChildrenMember" parameterType="Integer" resultType="string">

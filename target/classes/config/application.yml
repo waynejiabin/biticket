@@ -6,10 +6,10 @@ jdbc:
         druid:
             # 主库数据源
             master:
-                url: jdbc:mysql://localhost:3306/kingo?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&allowMultiQueries=true
+                url: jdbc:mysql://localhost:3366/biticket?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&allowMultiQueries=true
                 username: root
                 password: 123456
-#                url: jdbc:mysql://rm-j6cfa46tnd83b26uqdo.mysql.rds.aliyuncs.com:3366/jinguo?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&allowMultiQueries=true
+#                url: jdbc:mysql://rm-j6cfa46tnd83b26uqdo.mysql.rds.aliyuncs.com:3366/biticket?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&allowMultiQueries=true
 #                username: kingoadmin
 #                password: KingoApp_C()nn2018Go
              # 从库数据源
@@ -50,10 +50,10 @@ jdbc:
                         config:
                         multi-statement-allow: true
  # 项目相关配置
-ruoyi:
+biticket:
   #名称
   #name: RuoYi
-  name: KingoApi
+  name: BicketApi
   #版本
   version: 1.1.0
   #版权年份
@@ -79,7 +79,7 @@ server:
 #日志配置
 logging:
   level:
-    com.ruoyi: debug
+    com.biticket: debug
     org.springframework: WARN
     org.spring.springboot.dao: debug
 #用户配置
@@ -114,7 +114,7 @@ spring:
 # MyBatis
 mybatis:
     # 搜索指定包别名
-    typeAliasesPackage: com.ruoyi.project
+    typeAliasesPackage: com.biticket.project
     # 配置mapper的扫描，找到所有的mapper.xml映射文件
     mapperLocations: classpath:mybatis/**/*Mapper.xml
     # 加载全局的配置文件
@@ -166,15 +166,16 @@ xss:
 # 短信
 sms.yy:
     url: https://dx.ipyy.net/sms.aspx
-    signature: 金果商城
+    signature: 态阳网络科技
     appKey: AA00086
     appSecrect: AA0008613
-    isOpen: true
+    isOpen: false
 
 # 阿里短信网关
 sms.dayu:
      product: Dysmsapi
      domain: dysmsapi.aliyuncs.com
-     appKey: LTAIStZhSHI83t37
-     appSecret: XY4HERHGmX12A2t6UhG7RzTF16BPoj
-     isOpen: false
+     signature: 态阳网络科技
+     appKey: LTAI1YP3IQhkNjhz
+     appSecrect: wRuBy2bFfonrN4GFDGKMlEs1prn0ck
+     isOpen: true

@@ -1,6 +1,7 @@
 package com.biticket.framework.message;
 
 import com.biticket.framework.message.dayu.DayuSmsConfig;
+import com.biticket.framework.message.dayu.DayuSmsUtil;
 import com.biticket.framework.message.yy.YySmsUtil;
 import com.biticket.framework.message.yy.config.YySmsConfig;
 import org.slf4j.Logger;
@@ -24,7 +25,7 @@ public class IMessageAutoConfiguration {
 
 	@Bean(name="kingo.essageInit")
 	public Object init() {
-		//SmsUtil.init(dayuSmsConfig());
+		DayuSmsUtil.init(dayuSmsConfig());
 		YySmsUtil.init(yySmsConfig());
 		log.debug("------ 信息发送工具初始化成功-----");
 		return null;

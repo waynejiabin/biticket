@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ruoyi.project.wallet.userTransSerial.mapper.UserTransSerialMapper">
+<mapper namespace="com.biticket.project.wallet.userTransSerial.mapper.UserTransSerialMapper">
 
     <resultMap type="UserTransSerial" id="UserTransSerialResult">
         <result property="transId" column="trans_id"/>
@@ -72,7 +72,6 @@
 
     </select>
 
-
     <select id="selectUserTransSerialById" parameterType="Long" resultMap="UserTransSerialResult">
         <include refid="selectUserTransSerialVo"/>
         where trans_id = #{transId} and del_flag = 0
@@ -140,6 +139,19 @@
         </foreach>
         and del_flag = 0
     </delete>
+    <!--批量更新状态-->
+    <update id="updateBatchTransStatus" parameterType="java.util.List">
+        update ats_user_trans_serial set trans_status =
+
+        <foreach index="index" collection="serialList" item="item" open="" close="">
+            when trans_id=#{item.transId} then #{item.transStatus}
+        </foreach>
+        where trans_id in
+        <foreach index="index" collection="serialList" item="item" separator="," open="(" close=")">
+            #{item.transId,jdbcType=BIGINT},
+        </foreach>
+    </update>
+
     <insert id="insertBatch" parameterType="java.util.List">
         insert into ats_user_trans_serial
         (

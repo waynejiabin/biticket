@@ -9,7 +9,7 @@ jdbc:
                 url: jdbc:mysql://localhost:3366/biticket?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&allowMultiQueries=true
                 username: root
                 password: 123456
-#                url: jdbc:mysql://rm-j6cfa46tnd83b26uqdo.mysql.rds.aliyuncs.com:3366/jinguo?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&allowMultiQueries=true
+#                url: jdbc:mysql://rm-j6cfa46tnd83b26uqdo.mysql.rds.aliyuncs.com:3366/biticket?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&allowMultiQueries=true
 #                username: kingoadmin
 #                password: KingoApp_C()nn2018Go
              # 从库数据源
@@ -166,7 +166,7 @@ xss:
 # 短信
 sms.yy:
     url: https://dx.ipyy.net/sms.aspx
-    signature: 金果商城
+    signature: 态阳网络科技
     appKey: AA00086
     appSecrect: AA0008613
     isOpen: false
@@ -175,6 +175,7 @@ sms.yy:
 sms.dayu:
      product: Dysmsapi
      domain: dysmsapi.aliyuncs.com
-     appKey: LTAIStZhSHI83t37
-     appSecret: XY4HERHGmX12A2t6UhG7RzTF16BPoj
+     signature: 态阳网络科技
+     appKey: LTAI1YP3IQhkNjhz
+     appSecrect: wRuBy2bFfonrN4GFDGKMlEs1prn0ck
      isOpen: true

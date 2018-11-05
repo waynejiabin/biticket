@@ -5,7 +5,8 @@ package com.biticket.common.enums;
  * @author Administrator
  */
 public enum KingoTypeEnum {
-   /** 1-解冻；2-加速释放；3-转入；4-转出；5-其他*/
+    /** 1-解冻；2-加速释放；3-转入；4-转出；5-其他*/
+    KINGO_SYSTEM(0,"系统配送","收入：配送"),
     /**解冻*/
     KINGO_RELEASE(1,"锁仓解冻产生","解冻：解冻"),
 
@@ -16,7 +17,9 @@ public enum KingoTypeEnum {
     KINGO_OUT(4,"转出消耗","转出：转出"),
 
     /**进项:推荐奖励*/
-    KINGO_RECOMMEND_IN(5,"推荐奖励产生","收入：推荐");
+    KINGO_RECOMMEND_IN(5,"推荐奖励产生","收入：推荐"),
+    /**进项:推荐奖励*/
+    KINGO_RECOMMEND_CONFIG(9,"系统赠送","收入：赠送");
 
     private int type;
 
@@ -55,3 +58,5 @@ public enum KingoTypeEnum {
     }
 
 }
+
+

@@ -11,7 +11,7 @@ package com.biticket.framework.message.yy;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.biticket.framework.message.dayu.SmsUtil;
+import com.biticket.framework.message.dayu.DayuSmsUtil;
 import com.biticket.framework.message.yy.config.YySmsConfig;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -46,11 +46,12 @@ public class YySmsUtil {
 
 	public static void init(YySmsConfig config) {
 		YySmsUtil.config = config;
-		SmsUtil.isOpen = config.getIsOpen();
+		DayuSmsUtil.isOpen = config.getIsOpen();
 		log.info(isOpen ? "华信短信开关---------已打开" : "华信短信开关-----------已关闭");
 	}
 	public static boolean  sendSms(String mobile,String text) throws Exception {
-		httpclient = new SSLClient();
+
+			httpclient = new SSLClient();
 		HttpPost post = new HttpPost(config.getUrl());
 		//String d =config.getAppKey();
 		post.setHeader("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
@@ -63,7 +64,10 @@ public class YySmsUtil {
 		nvps.add(new BasicNameValuePair("content", text));
 		nvps.add(new BasicNameValuePair("sendTime", ""));
 		nvps.add(new BasicNameValuePair("extno", ""));
-		post.setEntity(new UrlEncodedFormEntity(nvps,HTTP.UTF_8));
+
+			post.setEntity(new UrlEncodedFormEntity(nvps,HTTP.UTF_8));
+
+
 		HttpResponse response = httpclient.execute(post);
 
 		try {

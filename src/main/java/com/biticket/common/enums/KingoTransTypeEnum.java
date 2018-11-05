@@ -1,7 +1,7 @@
 package com.biticket.common.enums;
 
 /**
- * 金果记账类型 1 进账 2 出账;3-解冻
+ * Biticket票證记账类型 1 进账 2 出账;3-解冻
  *
  * @author Administrator
  */

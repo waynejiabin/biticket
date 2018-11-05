@@ -4,6 +4,8 @@ package com.biticket.project.wallet.member.controller;
 import com.biticket.common.enums.SmsTypeEnum;
 import com.biticket.common.utils.MajorKeyUtil;
 import com.biticket.common.utils.PhoneFormatCheckUtils;
+import com.biticket.framework.message.SmsUtils;
+import com.biticket.framework.message.dayu.DayuSmsConstants;
 import com.biticket.framework.message.yy.YySmsUtil;
 import com.biticket.framework.message.yy.common.YySmsConstants;
 import com.biticket.framework.web.controller.BaseController;
@@ -18,6 +20,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author admin
@@ -113,28 +117,39 @@ public class RegisterController extends BaseController {
         String code = MajorKeyUtil.createRandomSix();
         String context;
         switch (type) {
+            /**注册*/
             case "0":
-                context = YySmsConstants.TEMPALTE_REGISTER.replace("@", code);
+                //context = YySmsConstants.TEMPALTE_REGISTER.replace("@", code);
+                context = DayuSmsConstants.Tempalte_register_cdoe;
                 break;
+            /**找回密码*/
             case "1":
-                context = YySmsConstants.TEMPALTE_FIND_PWD.replace("@", code);
+               // context = YySmsConstants.TEMPALTE_FIND_PWD.replace("@", code);
+                context =DayuSmsConstants.tempalte_findPWD_cdoe;
                 break;
+            /**交易*/
             case "2":
-                context = YySmsConstants.TEMPALTE_TRADE.replace("@", code);
+                //context = YySmsConstants.TEMPALTE_TRADE.replace("@", code);
+                context = DayuSmsConstants.tempalte_biticket_trade;
                 break;
             default:
-                context = YySmsConstants.TEMPALTE_REGISTER.replace("@", code);
+                //context = YySmsConstants.TEMPALTE_REGISTER.replace("@", code);
+                context = DayuSmsConstants.Tempalte_register_cdoe;
                 break;
         }
 
-        smsValidate.setMobileNumber(mobile);
+     /*   smsValidate.setMobileNumber(mobile);
         smsValidate.setSmsContent(context);
         smsValidate.setValidateCode(String.valueOf(code));
-        smsValidate.setSmsType(Integer.valueOf(type));
-
+        smsValidate.setSmsType(Integer.valueOf(type));*/
+        Map map = new HashMap<>();
+        String[] mobiles = new String[1];
+        mobiles[0] = mobile;
+        map.put("code",code);
 
         /**发送短信*/
-        boolean smsFlag = YySmsUtil.sendSms(mobile, context);
+        //boolean smsFlag = YySmsUtil.sendSms(mobile, context);
+        boolean smsFlag  =  SmsUtils.sendSms(map,context,mobiles);
         if (smsFlag) {
             /**插入发送记录*/
             int flag = smsValidateService.insertSmsValidate(smsValidate);
