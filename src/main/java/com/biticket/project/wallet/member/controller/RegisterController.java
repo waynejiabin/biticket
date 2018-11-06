@@ -96,9 +96,9 @@ public class RegisterController extends BaseController {
             return error("请输入正确的手机号码！");
         }
         boolean isExitsLoginName = memberService.isExitsLoginName(mobile);
-        if (type.equals(SmsTypeEnum.SMS_REGISTER.getValue())) {
+        if (type.equals(String.valueOf(SmsTypeEnum.SMS_REGISTER.getValue())) && isExitsLoginName) {
             return error("当前账号已注册！");
-        } else if (!isExitsLoginName) {
+        } else if (!isExitsLoginName && !type.equals(String.valueOf(SmsTypeEnum.SMS_REGISTER.getValue()))) {
             return error("当前账号不存在！");
         }
 
@@ -138,10 +138,7 @@ public class RegisterController extends BaseController {
                 break;
         }
 
-     /*   smsValidate.setMobileNumber(mobile);
-        smsValidate.setSmsContent(context);
-        smsValidate.setValidateCode(String.valueOf(code));
-        smsValidate.setSmsType(Integer.valueOf(type));*/
+
         Map map = new HashMap<>();
         String[] mobiles = new String[1];
         mobiles[0] = mobile;
@@ -152,6 +149,10 @@ public class RegisterController extends BaseController {
         boolean smsFlag  =  SmsUtils.sendSms(map,context,mobiles);
         if (smsFlag) {
             /**插入发送记录*/
+            smsValidate.setMobileNumber(mobile);
+            smsValidate.setSmsContent(context);
+            smsValidate.setValidateCode(String.valueOf(code));
+            smsValidate.setSmsType(Integer.valueOf(type));
             int flag = smsValidateService.insertSmsValidate(smsValidate);
             if (flag > 0) {
                 return AjaxResult.success("短信发送成功！十分钟内操作有效！");

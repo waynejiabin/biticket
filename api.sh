@@ -5,7 +5,7 @@ cd ..
 DEPLOY_DIR=`pwd`
 CONF_DIR=$DEPLOY_DIR/conf
 
-SERVER_NAME="JGAPP-API"
+SERVER_NAME="API"
 LOGS_FILE=`sed '/app.log4j.file/!d;s/.*=//' conf/config/application.yml | tr -d '\r'`
 
 if [ -z "$SERVER_NAME" ]; then
