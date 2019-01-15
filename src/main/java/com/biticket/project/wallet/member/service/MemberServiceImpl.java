@@ -1,5 +1,6 @@
 package com.biticket.project.wallet.member.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.biticket.common.utils.security.EncryptUtils;
@@ -149,6 +150,57 @@ public class MemberServiceImpl implements IMemberService {
     @Override
     public int changeMemberAmount(List<Member> memberList) {
         return memberMapper.changeMemberAmount(memberList);
+    }
+
+    /**
+     * 查询出整个家族
+     * @param memberId
+     * @return
+     */
+    @Override
+    public List<Member> selectMemberFamily(Integer memberId) {
+        List<Member> list = new ArrayList<>();
+        List<Member> downMembers = selectDownMember(list, memberId);
+        List<Member> family = selectUpMember(downMembers, memberId);
+        return family;
+    }
+
+    /**
+     * 查询所有下线
+     * @param
+     * @return
+     */
+    @Override
+    public List<Member> selectDownMember(List<Member> family,Integer memberId) {
+        Member m = new Member();
+        m.setPartnerId(memberId);
+        if (selectMemberList(m).size()>=0){
+            List<Member> members = selectMemberList(m);
+            for (Member mem : members) {
+                family.add(mem);
+                selectDownMember(family,mem.getMemberId());
+            }
+        }
+        return family;
+    }
+
+    /**
+     * 查询出所有上线
+     * @param family
+     * @param memberId
+     * @return
+     */
+    public List<Member> selectUpMember(List<Member> family,Integer memberId){
+        Member m = new Member();
+        m.setMemberId(memberId);
+        if (selectMemberList(m).size()>=0){
+            List<Member> members = selectMemberList(m);
+            for (Member mem : members) {
+                family.add(mem);
+                selectUpMember(family,mem.getMemberId());
+            }
+        }
+        return family;
     }
 
 

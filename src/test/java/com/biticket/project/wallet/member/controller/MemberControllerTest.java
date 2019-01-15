@@ -1,8 +1,13 @@
 
 package com.biticket.project.wallet.member.controller;
 
+import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Test;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 public class MemberControllerTest {
@@ -15,7 +20,7 @@ public class MemberControllerTest {
         mvc = MockMvcBuilders.standaloneSetup(new MemberControllerTest()).build();
     }
 
-   /* @Test
+    @Test
    // @PostMapping("/upgradePartner/{memberId}")
     public void upgradePartner() throws Exception {
         String url = "/upgradePartner/2";//访问url
@@ -34,5 +39,5 @@ public class MemberControllerTest {
         Assert.assertFalse("错误", status != 200);
         Assert.assertTrue("数据一致", expectedResult.equals(content));
         Assert.assertFalse("数据不一致", !expectedResult.equals(content));
-    }*/
+    }
 }

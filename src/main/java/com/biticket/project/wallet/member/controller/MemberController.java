@@ -6,6 +6,7 @@ import com.biticket.common.enums.KingoTransTypeEnum;
 import com.biticket.common.enums.KingoTypeEnum;
 import com.biticket.common.enums.SmsTypeEnum;
 import com.biticket.common.utils.MajorKeyUtil;
+import com.biticket.common.utils.StringUtils;
 import com.biticket.common.utils.security.JwtTokenUtils;
 import com.biticket.framework.web.controller.BaseController;
 import com.biticket.framework.web.domain.AjaxResult;
@@ -18,11 +19,9 @@ import com.biticket.project.wallet.userTransSerial.domain.UserTransSerial;
 import com.biticket.project.wallet.userTransSerial.service.IUserTransSerialService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
 import java.math.BigDecimal;
@@ -80,6 +79,91 @@ public class MemberController extends BaseController {
         }
         return AjaxResult.success("操作成功！", member);
     }
+
+    @ApiOperation(value = "用户详细数据")
+    @PostMapping("/msg")
+    @ResponseBody
+    public AjaxResult memberMsg(Integer memberId){
+        Member member = memberService.selectMemberById(memberId);
+        return AjaxResult.success("OK",member);
+    }
+
+    @ApiOperation(value = "查询我的代理")
+    @PostMapping("/agent")
+    @ResponseBody
+    public AjaxResult agentMsg(Integer memberId){
+        Member member = memberService.selectMemberById(memberId);
+        Integer partnerId = member.getPartnerId();
+        Member agent = memberService.selectMemberById(partnerId);
+        return AjaxResult.success("OK",agent);
+    }
+
+    @ApiOperation(value = "通过原密码修改密码")
+    @PostMapping("/changePwd")
+    @ResponseBody
+    public AjaxResult changePwd(Integer memberId,String oldMemberPwd,String newMemberPwd){
+        Member member = memberService.selectMemberById(memberId);
+        String memberPassword = member.getMemberPassword();
+        if (StringUtils.isEmpty(oldMemberPwd) || StringUtils.isEmpty(newMemberPwd)){
+            return error("密码不能为空");
+        }
+        if(memberPassword.equals(bCryptPasswordEncoder.encode(oldMemberPwd))){
+            member.setMemberPassword(bCryptPasswordEncoder.encode(newMemberPwd));
+            memberService.updateMember(member);
+            return  success("密码修改成功");
+        }else {
+            return error("密码不正确");
+        }
+    }
+
+    @ApiOperation(value = "重新设置密码")
+    @PostMapping("/resetPwd/{smsCode}")
+    @ResponseBody
+    public AjaxResult resetPwd(@PathVariable("smsCode") String smsCode, Integer memberId, String memberPassword,String memberPassword2){
+        Member member = memberService.selectMemberById(memberId);
+        if (null == smsCode) {
+            return error("无效验证码");
+        }
+        if (!memberPassword.equals(memberPassword2)) {
+            return error("两次输入的密码不一致！");
+        }
+        /**验证码*/
+        SmsValidate smsValidate = new SmsValidate();
+        smsValidate.setSmsType(SmsTypeEnum.SMS_FIND_PWD.getValue());
+
+        smsValidate = smsValidateService.selectSmsValidateByMobile(smsValidate);
+        if (null == smsValidate) {
+            return error("无效验证码！");
+        }
+        if (smsValidate.getExpireTime().getTime() < System.currentTimeMillis()) {
+            return error("验证码已过期，请重新获取！");
+        }
+        if (!smsValidate.getValidateCode().equals(smsCode)) {
+            return error("验证码错误！");
+        }
+
+        member.setMemberPassword(memberPassword);
+        return toAjax(memberService.updateMember(member));
+    }
+
+    @ApiOperation(value = "查询所有家族成员")
+    @PostMapping("/myFamily")
+    @ResponseBody
+    public List<Member> myFamily(Integer memberId){
+        List<Member> myFamily = memberService.selectMemberFamily(memberId);
+        return myFamily;
+    }
+
+    @ApiOperation(value = "查询出下线成员")
+    @PostMapping("/childerMembers")
+    @ResponseBody
+    public List<Member> selectChilderMember(Integer memberId){
+        List<Member> list = new ArrayList<>();
+        List<Member> childerMember = memberService.selectDownMember(list,memberId);
+        return childerMember;
+    }
+
+
 
     /**
      * 查询会员列表

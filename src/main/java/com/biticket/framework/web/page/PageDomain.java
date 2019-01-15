@@ -7,7 +7,7 @@ import com.biticket.common.utils.StringUtils;
  * 
  * @author biticket
  */
-public class PageDomain
+public class  PageDomain
 {
     /** 当前记录起始索引 */
     private Integer pageNum;

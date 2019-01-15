@@ -92,4 +92,8 @@ public interface IMemberService
 	 * @return
 	 */
 	int changeMemberAmount(List<Member> memberList);
+
+	List<Member> selectMemberFamily(Integer memberId);
+
+	List<Member> selectDownMember(List<Member> family,Integer memberId);
 }
